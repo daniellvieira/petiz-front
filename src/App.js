@@ -6,7 +6,7 @@ import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import Login from './Components/Login/Login';
-import { UserStorage } from './Context/User';
+import { UserStorage } from './Contexts/User';
 
 function App() {
   return (
