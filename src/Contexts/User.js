@@ -33,16 +33,15 @@ export const UserStorage = ({ children }) => {
 
   async function userLogin(username, password) {
     try {
-      setLoading(true);
       setError(null);
+      setLoading(true);
       const { url, options } = TOKEN_POST({ username, password });
-      const tokenResponse = await fetch(url, options);
-      console.log(tokenResponse);
-      if (!tokenResponse.ok)
-        throw new Error(`Error: ${tokenResponse.statusText}`);
-      const { token } = await tokenResponse.json();
+      const tokenRes = await fetch(url, options);
+      if (!tokenRes.ok) throw new Error(`Error: ${tokenRes.statusText}`);
+      const { token } = await tokenRes.json();
       window.localStorage.setItem('token', token);
       await getUser(token);
+      navigate('/account');
     } catch (err) {
       setError(err.message);
       setLogin(false);
@@ -61,12 +60,9 @@ export const UserStorage = ({ children }) => {
           const { url, options } = TOKEN_VALIDATE_POST(token);
           const response = await fetch(url, options);
           if (!response.ok) throw new Error('Token inválido');
-          const json = await response.json();
           await getUser(token);
-          navigate('/account');
         } catch (err) {
           userLogout();
-          setError(err);
         } finally {
           setLoading(false);
         }
@@ -77,7 +73,7 @@ export const UserStorage = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ userLogin, data, userLogout, error, loading, login }}
+      value={{ userLogin, userLogout, data, error, loading, login }}
     >
       {children}
     </UserContext.Provider>
