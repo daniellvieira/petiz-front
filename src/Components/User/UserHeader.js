@@ -4,9 +4,9 @@ import styles from './UserHeader.module.css';
 import UserHeaderNav from './UserHeaderNav';
 
 const titleLocale = {
-  '/account': 'Minha conta',
+  '/account': 'Minhas Fotos',
   '/account/stats': 'Estatísticas',
-  '/account/post': 'Poste sua foto',
+  '/account/post': 'Adicionar Foto',
 };
 
 const UserHeader = () => {
