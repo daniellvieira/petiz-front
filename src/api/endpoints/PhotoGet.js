@@ -9,11 +9,9 @@ const PhotoGet = () => {
 
     fetch(`${URL}/api/photo/${query}`)
       .then((response) => {
-        console.log(response);
         return response.json();
       })
       .then((json) => {
-        console.log(json);
         return json;
       });
   }
