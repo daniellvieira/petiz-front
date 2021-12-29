@@ -98,3 +98,19 @@ export function COMMENT_POST(id, body) {
     },
   };
 }
+
+export function PHOTO_DELETE(id, body) {
+  const token = window.localStorage.getItem('token');
+
+  return {
+    url: `${API_URL}/api/photo/${id}`,
+    options: {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + token,
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
