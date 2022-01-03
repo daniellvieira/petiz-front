@@ -6,6 +6,7 @@ import Input from '../Forms/Input';
 import Error from '../Helpers/Error';
 import useFetch from '../Hooks/useFetch';
 import useForm from '../Hooks/useForm';
+import Head from '../Helpers/Head';
 
 const ResetPassword = () => {
   const [login, setLogin] = React.useState('');
@@ -36,6 +37,7 @@ const ResetPassword = () => {
 
   return (
     <div>
+      <Head title="Nova senha" />
       <h1 className="title">Digite a nova senha</h1>
       <form onSubmit={handleSubmit}>
         <Input

@@ -5,6 +5,7 @@ import Input from '../Forms/Input';
 import Error from '../Helpers/Error';
 import useFetch from '../Hooks/useFetch';
 import useForm from '../Hooks/useForm';
+import Head from '../Helpers/Head';
 
 const ForgotPassword = () => {
   const login = useForm('');
@@ -26,6 +27,7 @@ const ForgotPassword = () => {
 
   return (
     <section>
+      <Head title="Esqueceu a senha ?" />
       <h1 className="title">Esqueceu a senha ?</h1>
       {data ? (
         <p style={flashMessageStyle}>{data}</p>
