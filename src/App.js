@@ -7,6 +7,7 @@ import Header from './Components/Header';
 import ProtectedRoute from './Components/Helpers/ProtectedRoute';
 import Home from './Components/Home';
 import Login from './Components/Login/Login';
+import NotFound from './Components/NotFound';
 import Photo from './Components/Photo/Photo';
 import User from './Components/User/User';
 import UserProfile from './Components/User/UserProfile';
@@ -23,6 +24,7 @@ function App() {
             <Route path="login/*" element={<Login />} />
             <Route path="photo/:id" element={<Photo />} />
             <Route path="profile/:user" element={<UserProfile />} />
+            <Route path="*" element={<NotFound />} />
             <Route
               path="account/*"
               element={
