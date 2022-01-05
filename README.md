@@ -23,11 +23,11 @@ npm install
 npm start
 ```
 
-## License
+## Certificado
 
 Esse app foi realizado com base no excelente curso de [React Completo] da [Origamid].
 
-## Certificado
+![certificate-preview-0a0b9f99-1](https://user-images.githubusercontent.com/5272312/148141916-6ab32176-921e-4a61-b85e-5e5db893f254.jpg)
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
 [react completo]: https://www.origamid.com/curso/react-completo/
