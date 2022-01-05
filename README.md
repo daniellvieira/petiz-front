@@ -1,4 +1,4 @@
-# Petix
+# Petiz
 
 ## _Rede social para animais_
 
